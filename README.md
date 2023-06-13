@@ -1,7 +1,7 @@
 # Web Testing Mini Project
 ## Project Goal
 
-- Testing the functionality register user before checkout to place an order of a given website.
+- Testing particular feature of a given website.
   [Website Url](https://automationexercise.com/)
 - Generating defect reports by exploratory testing.
 - creating test charters
@@ -20,7 +20,15 @@
 ### Steps to create a test automation framework:
 >Step 1: Create a project and repo in GitHub to work collaborative.
 >Step 2: Clone the git repo and open the project in Intellij.    
->Step 3: 
+>Step 3: Added all dependencies to the pom.xml
+>- org.junit.jupiter
+>- org.hamcrest
+>- org.seleniumhq.selenium     
+>-- selenium-http-jdk-client  
+>-- selenium-java  
+>- io.cucumber   
+>-- cucumber-java  
+>-- cucumber-junit 
 
 
 ## What was tested
