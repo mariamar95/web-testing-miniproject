@@ -20,7 +20,7 @@
 ### Steps to create a test automation framework:
 >Step 1: Create a project and repo in GitHub to work collaborative.
 >Step 2: Clone the git repo and open the project in Intellij.    
->Step 3: Added all dependencies to the pom.xml
+>Step 3: Added all dependencies and plugins to the pom.xml
 >- org.junit.jupiter
 >- org.hamcrest
 >- org.seleniumhq.selenium     
@@ -29,6 +29,9 @@
 >- io.cucumber   
 >-- cucumber-java  
 >-- cucumber-junit 
+>- Plugins  
+>--  Cucumber for java by JetBrains  
+>-- Gherkin by JetBrains 
 
 
 ## What was tested
