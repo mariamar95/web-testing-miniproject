@@ -13,21 +13,23 @@
 
 
 ## How to set up your test framework
+
 ### Tools and technologies used:
 
->- Java as the programming language
->- Maven as the build tool
->- Intellij as the IDE
->- Git as version control
->- Junit/Hamcrest as assertion framework
->- Selenium WebDriver as the browser automation tool
->- Cucumber to automate test cases
+>- [Java](https://www.java.com/en/) - programming language
+>- [Maven](https://maven.apache.org/) - the build tool
+>- [IntelliJ IDEA](https://www.jetbrains.com/idea/) - IDE
+>- [Git](https://git-scm.com/) - version control
+>- [Junit](https://junit.org/junit5/) - testing framework
+>- [Hamcrest](https://hamcrest.org/) - framework for writing matcher objects
+>- [Selenium WebDriver](https://www.selenium.dev/) - browser automation tool
+>- [Cucumber](https://cucumber.io/) - used to automate test cases
 
 
 ### Steps to create a test automation framework:
 >- Step 1: Create a GitHub repository
 >- Step 2: Clone the git repo 
->- Step 3 open the project in Intellij.    
+>- Step 3 Open the project in Intellij.    
 >- Step 3: Add all dependencies and plugins to the pom.xml
 >  - org.junit.jupiter
 >  - org.hamcrest
@@ -44,7 +46,6 @@
 
 ## What was tested
 ###  **Automated Tests**
-#### Tested the following user stories:
 
 **User Story 1:**
 As a user of the website, I want to be able to register for an account so that I can save my details and checkout
@@ -61,12 +62,19 @@ As a user, I want to be able to login so that I can access my account
 
 
 ###  **Exploratory Testing**
+> **The primary objective of this exploratory testing session was to identify potential issues and verify the user experience related to:**
+>
+> - **Future Checkout:** Ensuring the functionality and usability of the feature which allows users to reserve products for future checkout.
+> 
+> - **Adding to Cart:** Checking the functionality of adding items to the shopping cart and verifying if they persist as users navigate through the site.
+> 
+> - **Signup:** Verifying the registration process for new users and ensuring the integrity and security of user data.
 
 ## Test Metrics
 
 ### Collaborators
 > - [Carlyn Humble](https://github.com/CarlynHumble)
-> - [Leila Mohebi]()
-> - [Iliana Blagova]()
-> - [Maria Markou-Inglis](https://github.com/mariamar95)
+> - [Leila Mohebi](https://github.com/leilamohebi)
+> - [Iliana Blagova](https://github.com/iliana0724)
 > - [Tessa George](https://github.com/tessthott)
+> - [Maria Markou-Inglis](https://github.com/mariamar95)
