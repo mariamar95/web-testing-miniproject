@@ -69,7 +69,7 @@ public class MyStepdefs {
 
     @And("email address")
     public void emailAddress() {
-        loginPage.enterEmail("name@domain.com");
+        loginPage.enterEmail("name@dtomain.com");
     }
 
     @And("click signup")
@@ -90,7 +90,7 @@ public class MyStepdefs {
 
     @And("The email field contain the email entered")
     public void theEmailFieldContainTheEmailEntered() {
-        Assertions.assertEquals("name@domain.com", signupPage.getEmail());
+        Assertions.assertEquals("name@dtomain.com", signupPage.getEmail());
     }
 
     @Given("I am on the signup page")
@@ -98,7 +98,7 @@ public class MyStepdefs {
         homePage = new HomePage(webDriver);
         loginPage = homePage.goToLoginPage();
         loginPage.enterName("name");
-        loginPage.enterEmail("name@domafin.com");
+        loginPage.enterEmail("name@domaifffffn.com");
         signupPage = loginPage.clickSignUp();
     }
 
@@ -178,7 +178,6 @@ public class MyStepdefs {
     }
     @And("click login")
     public void clickLogin() {
-        loginPage.clickLogin();
     }
 
     @Then("I can see that I am logged in")
@@ -189,23 +188,15 @@ public class MyStepdefs {
 
     @And("an incorrect password")
     public void anIncorrectPassword() {
+        loginPage.enterUserPassword("bad");
     }
 
     @Then("I will see the error message - your email or password is incorrect")
     public void iWillSeeTheErrorMessageYourEmailOrPasswordIsIncorrect() {
+        var result = webDriver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/p")).getText();
+        MatcherAssert.assertThat(result, containsString("Your email or password is incorrect!"));
     }
 
-    @And("I enter an email address in an invalid format")
-    public void iEnterAnEmailAddressInAnInvalidFormat() {
-    }
-
-    @And("any password")
-    public void anyPassword() {
-    }
-
-    @Then("I will see a popup message - please include an {string}")
-    public void iWillSeeAPopupMessagePleaseIncludeAn() {
-    }
 
 
 }

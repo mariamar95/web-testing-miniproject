@@ -1,13 +1,14 @@
 package com.sparta.rtwo.pom.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
     private final By usernameBy = new By.ByXPath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]");
     private final By passwordBy = new By.ByName("password");
-    private final By loginButtonBy = new By.ByClassName("btn btn-default");
+    private final By loginButtonBy = new By.ByXPath("//*[@id=\"form\"]/div/div/div[1]/div/form/button");
     private final By name = new By.ByName("name");
     private final By email = new By.ByXPath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]");
     //    private final By signUpButton = new By.ByLinkText("Signup");
@@ -36,7 +37,7 @@ public class LoginPage {
     }
     public void enterUserPassword(String password){
         var passwordBox = webDriver.findElement(passwordBy);
-        passwordBox.sendKeys(password);
+        passwordBox.sendKeys(password, Keys.ENTER);
 
     }
     public void clickLogin(){
