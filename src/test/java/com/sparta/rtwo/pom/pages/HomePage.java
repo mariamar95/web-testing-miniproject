@@ -20,9 +20,9 @@ public class HomePage {
         webDriver.get("https://automationexercise.com/");
     }
 
-    private void goToLoginPage(){
+    private LoginPage goToLoginPage(){
         webDriver.findElement(loginLink).click();
-        // write return
+        return new LoginPage(webDriver);
     }
 
     private void goToProductPage(){
