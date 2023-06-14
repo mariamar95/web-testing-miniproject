@@ -94,7 +94,11 @@ public class MyStepdefs {
         homePage = new HomePage(webDriver);
         loginPage = homePage.goToLoginPage();
         loginPage.enterName("name");
+<<<<<<< HEAD
         loginPage.enterEmail("name@domain.com");
+=======
+        loginPage.enterEmail("name@domafin.com");
+>>>>>>> b8ac5951ac9fccd74e76411d8643c7eb3e0dd96a
         signupPage = loginPage.clickSignUp();
     }
 
@@ -160,6 +164,8 @@ public class MyStepdefs {
 
     @Then("I will be  redirected to a page account created")
     public void iWillBeRedirectedToAPageAccountCreated() {
-        Assertions.assertEquals("https://automationexercise.com/account_created",accountCreatedPage.getUrl());
+
+        Assertions.assertEquals("https://automationexercise.com/account_created",webDriver.getCurrentUrl());
+
     }
 }

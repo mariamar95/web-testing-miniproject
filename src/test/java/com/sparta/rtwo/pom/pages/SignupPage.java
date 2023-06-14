@@ -12,7 +12,7 @@ public class SignupPage {
     private Select select;
     private final By name = new By.ByName("name");
     private final By email = new By.ByXPath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]");
-//    private final By signUpButton = new By.ByLinkText("Signup");
+    //    private final By signUpButton = new By.ByLinkText("Signup");
     private final By signUpButton = new By.ByXPath("//*[@id=\"form\"]/div/div/div[3]/div/form/button");
     private final By title = new By.ById("id_gender2");
     private final By password = new By.ById("password");
