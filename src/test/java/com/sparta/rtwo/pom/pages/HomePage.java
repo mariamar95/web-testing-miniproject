@@ -7,7 +7,7 @@ public class HomePage {
 
     private final WebDriver webDriver;
 
-    private By loginLink = new By.ByLinkText(" Signup / Login");
+    private By loginLink = new By.ByXPath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a");
     private By productLink = new By.ByLinkText(" Products");
     private By cartLink = new By.ByLinkText(" Cart");
     private By addToCartButton = new By.ByLinkText("Add to cart");
@@ -20,22 +20,22 @@ public class HomePage {
         webDriver.get("https://automationexercise.com/");
     }
 
-    private LoginPage goToLoginPage(){
+    public LoginPage goToLoginPage(){
         webDriver.findElement(loginLink).click();
         return new LoginPage(webDriver);
     }
 
-    private void goToProductPage(){
+    public void goToProductPage(){
         webDriver.findElement(productLink).click();
         // write return
     }
 
-    private void goToCartPage(){
+    public void goToCartPage(){
         webDriver.findElement(cartLink).click();
         // write return
     }
 
-    private void addToCart(){
+    public void addToCart(){
         webDriver.findElement(addToCartButton).click();
         // write return
     }
