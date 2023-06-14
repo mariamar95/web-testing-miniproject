@@ -12,7 +12,7 @@ public class SignupPage {
     private Select select;
     private final By name = new By.ByName("name");
     private final By email = new By.ByXPath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]");
-//    private final By signUpButton = new By.ByLinkText("Signup");
+    //    private final By signUpButton = new By.ByLinkText("Signup");
     private final By signUpButton = new By.ByXPath("//*[@id=\"form\"]/div/div/div[3]/div/form/button");
     private final By title = new By.ById("id_gender2");
     private final By password = new By.ById("password");
@@ -29,10 +29,14 @@ public class SignupPage {
     private final By phone = new By.ById("mobile_number");
     private final By createAccountButton = new By.ByXPath("//*[@id=\"form\"]/div/div/div/div/form/button");
     private final By continueButton = new By.ByXPath("//*[@id=\"form\"]/div/div/div/div/a");
+    private final By getName = new By.ByXPath("//*[@id=\"name\"]");
+    private final By getEmail = new By.ByXPath("//*[@id=\"email\"]");
+
+
 
     public SignupPage(WebDriver webDriver){
         this.webDriver = webDriver;
-        webDriver.get("https://automationexercise.com/signup");
+//        webDriver.get("https://automationexercise.com/signup");
 
     }
     public String getUrl(){
@@ -75,8 +79,9 @@ public class SignupPage {
     public void enterPhone(String phoneInput){
         webDriver.findElement(phone).sendKeys(phoneInput);
     }
-    public void clickCreateAccount(){
+    public AccountCreatedPage clickCreateAccount(){
         webDriver.findElement(createAccountButton).click();
+        return new AccountCreatedPage(webDriver);
     }
 
     public void enterInitialDetails(String name, String email){
@@ -95,6 +100,12 @@ public class SignupPage {
     }
     public void createAccountContinue(){
         webDriver.findElement(continueButton).click();
+    }
+    public String getName(){
+        return webDriver.findElement(getName).getAttribute("value");
+    }
+    public String getEmail(){
+        return webDriver.findElement(getEmail).getAttribute("value");
     }
 
 
