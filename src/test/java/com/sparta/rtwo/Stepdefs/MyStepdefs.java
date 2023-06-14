@@ -9,13 +9,17 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.IOException;
+
+import static org.hamcrest.Matchers.containsString;
 
 public class MyStepdefs {
     private HomePage homePage;
@@ -94,11 +98,9 @@ public class MyStepdefs {
         homePage = new HomePage(webDriver);
         loginPage = homePage.goToLoginPage();
         loginPage.enterName("name");
-<<<<<<< HEAD
-        loginPage.enterEmail("name@domain.com");
-=======
+
         loginPage.enterEmail("name@domafin.com");
->>>>>>> b8ac5951ac9fccd74e76411d8643c7eb3e0dd96a
+
         signupPage = loginPage.clickSignUp();
     }
 
@@ -168,4 +170,46 @@ public class MyStepdefs {
         Assertions.assertEquals("https://automationexercise.com/account_created",webDriver.getCurrentUrl());
 
     }
+
+    @And("I enter my valid email address")
+    public void iEnterMyValidEmailAddress() {
+        loginPage.enterUserName("name@domain.com");
+    }
+
+    @And("the correct password")
+    public void theCorrectPassword() {
+        loginPage.enterUserPassword("password");
+    }
+    @And("click login")
+    public void clickLogin() {
+        loginPage.clickLogin();
+    }
+
+    @Then("I can see that I am logged in")
+    public void iCanSeeThatIAmLoggedIn() {
+        var test = webDriver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")).getText();
+        MatcherAssert.assertThat(test, containsString("name"));
+    }
+
+    @And("an incorrect password")
+    public void anIncorrectPassword() {
+    }
+
+    @Then("I will see the error message - your email or password is incorrect")
+    public void iWillSeeTheErrorMessageYourEmailOrPasswordIsIncorrect() {
+    }
+
+    @And("I enter an email address in an invalid format")
+    public void iEnterAnEmailAddressInAnInvalidFormat() {
+    }
+
+    @And("any password")
+    public void anyPassword() {
+    }
+
+    @Then("I will see a popup message - please include an {string}")
+    public void iWillSeeAPopupMessagePleaseIncludeAn() {
+    }
+
+
 }
