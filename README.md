@@ -71,7 +71,10 @@ As a user, I want to be able to login so that I can access my account
 > - **Signup:** Verifying the registration process for new users and ensuring the integrity and security of user data.
 
 ## Test Metrics
-
+[Cucumber Report](https://reports.cucumber.io/reports/ac04cfe8-2009-4c3f-8c64-4f953da0a030)
+![Report 1](cucumberreport/cucumberreport1.png)
+![Report 2](cucumberreport/cucumberreport2.png)
+![Report 3](cucumberreport/cucumberreport3.png)
 ### Collaborators
 > - [Carlyn Humble](https://github.com/CarlynHumble)
 > - [Leila Mohebi](https://github.com/leilamohebi)
